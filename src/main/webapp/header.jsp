@@ -15,6 +15,7 @@
   }
       img{
       position: relative;
+      border-radius: 30px;
       }
       p{
       color: White;
@@ -34,10 +35,10 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <a class="navbar-brand"  href="#"><img src="logo.png" alt="Laptop_market" align="middle" width="90" height="90" margin-left=""></a>
+  <a class="navbar-brand"  href="#"><img src="logo.png" alt="Laptop_market" align="middle" width="90" height="90" ></a>
   
 <div  class="header">
-   <h2>LAPTOP MARKET PLACE</h2><br>
+   <h2>LAPTOP MARKET PLACE</h2>
     <h3 align="center">Sopra Steria</h3>
     </div>
   
