@@ -26,17 +26,15 @@
         .text-container { 
             text-align: center; 
         } 
+        .mainbody{
+             margin-top: 150px;
+        }
     </style> 
 </head>
-<body>
+<body >
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-   <div class="background"></div> 
-    <div class="text-container" class="align-middle"> 
-        <h1 style="color:black" > 
-            Welcome </h1> 
-  <p>A complete store for all your needs</p>
-  </div>
+<%@include file="header.jsp" %>
+<div class="mainbody" align ="center">
   <ul class="nav nav-pills nav-fill">
   <li class="nav-item">
     <a class="nav-link" aria-current="page" href="show.jsp" style="color:black">Show</a>
@@ -48,6 +46,7 @@
     <a class="nav-link" href="purchase.jsp" style="color:black">Purchase</a>
   </li>
 </ul>
+</div>
 <%@include file="footer.jsp" %>
 </body>
 </html>
