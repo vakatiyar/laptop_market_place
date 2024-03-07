@@ -11,11 +11,7 @@
 
 <style type="text/css">
 
-.all{
-background-color: grey;
-margin-bottom: 100px;
-padding-bottom: 5%
-}
+
 
 .card-body
 {
@@ -29,8 +25,9 @@ padding-top:15%;
 border-radius:50px;
 border: 5px solid #51829B;
 margin: 5%;
-margin-left: 150px;
-margin-top:100px;
+margin-left: 350px;
+margin-top:150px;
+
 background-color: #E3F4F4;
 }
 
@@ -52,7 +49,6 @@ background-color: #EBEBEB;
 </head>
 <body>
 <%@include file="header.jsp" %>
-<div class="all">
 <%if (request.getSession().getAttribute("result") != null) {
 	ResultSet rs = (ResultSet)request.getSession().getAttribute("result");
 	while(rs.next()){ %>
@@ -64,7 +60,7 @@ background-color: #EBEBEB;
 	    <p class="card-text" style="color: grey;">Name : <%=rs.getString(3) %></p>
 	    <h5 class="card-text2">Price : <%=rs.getDouble(4) %></h5>
 
-	  	<label for="quantity">Quantity</label><br>
+	  	<label for="quantity">Quantity <%=rs.getDouble(6) %></label><br>
 	  	<input type = "hidden" name = "product_id">
 	  	<input type="number" id="quantity" value="1" name="quantity">
 	 
@@ -74,11 +70,11 @@ background-color: #EBEBEB;
   </div>
 </div>
 </form>
-</div>	
+	
 <% }} %>
 
 <div class="all">
-
+<%@include file="header.jsp" %>
 
 </div>
 <!-- <h2>Purchase</h2>
@@ -86,7 +82,7 @@ background-color: #EBEBEB;
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select Product</label>
     <select class="form-control" id="exampleFormControlSelect1" name="product">
-    <option selected>Choose..</option>
+    <option selected>Choose...</option>
     
       <option>Lenovo</option>
       <option>Dell</option>

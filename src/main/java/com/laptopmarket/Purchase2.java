@@ -26,10 +26,10 @@ public class Purchase2 extends HttpServlet {
 	static final Connections con=new Connections();
 	static PreparedStatement stm1;
 	static PreparedStatement stm2;
-	public static final String readQuery = "Select product_id, product_name, product_desc, product_price, product_quantity, total_purchased from available_to_purchase";
+	public static final String readQuery = "Select product_id, product_name, product_desc, product_price, product_quantity, total_purchased from available_to_purchase;";
  
-	public static final String updatePurchase = "Update available_to_purchase set product_quantity = product_quantity - ? , total_purchased =  total_purchased + ? where product_id = ?";
-	public static final String updateSell = "Update available_to_sell set product_quantity = product_quantity + ? where product_id = ?";
+	public static final String updatePurchase = "Update available_to_purchase set product_quantity = product_quantity - ? , total_purchased =  total_purchased + ? where product_id = ?;";
+	public static final String updateSell = "Update available_to_sell set product_quantity = product_quantity + ? where product_id = ?;";
  
        
     /**
@@ -68,7 +68,8 @@ public class Purchase2 extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer productId = Integer.parseInt(request.getParameter("product_id"));
-		Integer quantity = Integer.parseInt(request.getParameter("quantity"));
+		int quantity = Integer.parseInt(request.getParameter("quantity"));
+		
 		try {
 			Connections con=new Connections();
 			stm1 = con.CreateC().prepareStatement(updatePurchase);
