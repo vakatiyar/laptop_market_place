@@ -89,7 +89,7 @@ public class Purchase2 extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	//RequestDispatcher rd = request.getRequestDispatcher("purchase.jsp");
+	//RequestDispatcher rd= request.getRequestDispatcher("purchase.jsp");
 	
 //		rd.forward(request, response);
 		RequestDispatcher rd = request.getRequestDispatcher("home1.jsp");
