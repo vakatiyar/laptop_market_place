@@ -46,7 +46,7 @@ input[type=submit] {
 <div class="all">
 
 <form class="form">
-<h2>Sell Your Product Here</h2><br>
+<h2>Sell Your Product Here--</h2><br>
   <label for="product">Choose a product:</label><br>
   <select id="product" name="product">
     <option value="Laptop">Select</option>
