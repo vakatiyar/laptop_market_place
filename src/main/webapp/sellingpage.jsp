@@ -30,7 +30,7 @@ background-color: #EBEBEB;
 input[type=submit] {
   background-color: #04AA6D;
   color: white;
-  padding: 13px 20px;
+  padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
