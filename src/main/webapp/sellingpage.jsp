@@ -51,7 +51,7 @@ input[type=submit] {
   <select id="product" name="product">
     <option value="Laptop">Select</option>
     <option value="Dell">Dell</option>
-    <option value="Lenovo">Lenovo </option>
+    <option value="Lenovo">Lenovo      </option>
   </select>
   <br>
   <label for="quantity">Quantity:</label><br>
