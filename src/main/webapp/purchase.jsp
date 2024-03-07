@@ -17,7 +17,7 @@ margin-bottom: 100px;
 padding-bottom: 5%
 }
 
-
+.card-body
 {
 float:left;
 height: 300px;

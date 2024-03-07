@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.laptopmarket.connect.Connections;
  
 /**
-* Servlet implementation class Purchase
+* Servlet class Purchase
 */
 @WebServlet("/Purchase2")
 public class Purchase2 extends HttpServlet {
