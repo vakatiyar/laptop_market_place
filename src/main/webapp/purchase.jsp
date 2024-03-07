@@ -74,7 +74,7 @@ background-color: #EBEBEB;
   </div>
 </div>
 </form>
-	
+</div>	
 <% }} %>
 
 <div class="all">
