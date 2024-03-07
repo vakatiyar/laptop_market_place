@@ -51,6 +51,8 @@ background-color: #EBEBEB;
 </style>
 </head>
 <body>
+<%@include file="header.jsp" %>
+<div class="all">
 <%if (request.getSession().getAttribute("result") != null) {
 	ResultSet rs = (ResultSet)request.getSession().getAttribute("result");
 	while(rs.next()){ %>
@@ -76,7 +78,7 @@ background-color: #EBEBEB;
 <% }} %>
 
 <div class="all">
-<%@include file="header.jsp" %>
+
 
 </div>
 <!-- <h2>Purchase</h2>

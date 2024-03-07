@@ -23,9 +23,9 @@ import com.laptopmarket.connect.Connections;
 @WebServlet("/Purchase2")
 public class Purchase2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	static final Connections con=new Connections();;
-	static PreparedStatement stm1 = null;
-	static PreparedStatement stm2 = null;
+	static final Connections con=new Connections();
+	static PreparedStatement stm1;
+	static PreparedStatement stm2;
 	public static final String readQuery = "Select product_id, product_name, product_desc, product_price, product_quantity, total_purchased from available_to_purchase";
  
 	public static final String updatePurchase = "Update available_to_purchase set product_quantity = product_quantity - ? , total_purchased =  total_purchased + ? where product_id = ?";
@@ -82,8 +82,8 @@ public class Purchase2 extends HttpServlet {
 			stm1.setInt(3, productId);
 			stm2.setInt(1, quantity);
 			stm2.setInt(2, productId);
-			stm1.execute();
-			stm2.execute();
+			stm1.executeQuery();
+			stm2.executeQuery();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
