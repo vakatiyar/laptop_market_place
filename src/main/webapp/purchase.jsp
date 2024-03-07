@@ -60,7 +60,7 @@ background-color: #EBEBEB;
 	    <h4 class="card-title">Brand : <%=rs.getString(2) %></h4>
 	    <p class="card-text" style="color: grey;">Name : <%=rs.getString(3) %></p>
 	    <h5 class="card-text2">Price : <%=rs.getDouble(4) %></h5>
-	    <input type="number" style="background-color: #E3F4F4"name = "product_id" placeholder="enter id">
+	    <input type="number" style="background-color: #E3F4F4" name = "product_id" placeholder="enter id">
 
 	  	<label for="quantity">Quantity <%=rs.getDouble(6) %></label><br>
 	  	
