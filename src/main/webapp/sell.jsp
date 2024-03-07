@@ -63,6 +63,7 @@ input[type=submit] {
   <input type="number" id="total_amount" name="total_amount" placeholder="Amount in INR" ><br><br>
   <input type="submit" value="Sell">
 </form>
+
 </div>
 <%@include file="footer.jsp" %>
 
