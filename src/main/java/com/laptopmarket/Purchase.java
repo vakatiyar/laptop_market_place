@@ -35,8 +35,8 @@ public class Purchase extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String product=request.getParameter("product");
-		Integer quantity = Integer.parseInt(request.getParameter("quantity"));
-		Integer price = Integer.parseInt(request.getParameter("price"));
+		int quantity = Integer.parseInt(request.getParameter("quantity"));
+		int price = Integer.parseInt(request.getParameter("price"));
 		String description=request.getParameter("description");
 		quant=quantity+quant;
 		
