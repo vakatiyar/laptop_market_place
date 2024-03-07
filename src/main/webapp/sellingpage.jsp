@@ -15,15 +15,15 @@ padding-bottom: 5%
 }
 
 .form{
-height: 550px;
-width: 900px;
+height: 350px;
+width: 450px;
 padding-bottom: 5%;
 padding-left:15%;
 padding-right:15%;
-padding-top:5%;
+padding-top:10%;
 border: 5px solid gray;
 margin: 5%;
-margin-left: 150px;
+margin-left: 75px;
 
 background-color: #EBEBEB;
 }
@@ -36,6 +36,20 @@ input[type=submit] {
   cursor: pointer;
   float: center;
 }
+.abc{
+background-color: grey;
+
+}
+
+
+#left-column{ 
+	float:left;
+	width:600px; 
+} 
+#right-column{ 
+	float:left; 
+	width:600px;
+} 
 </style>
 
 
@@ -43,26 +57,35 @@ input[type=submit] {
 
 <body>
 <%@include file="header.jsp" %>
-<div class="all">
+<div align="center" ><i><h2 class="abc">Sell Your Product</h2></i></div>
+<div class="all" id="left-column">
 
 <form class="form">
-<h2>Sell Your Product Here</h2><br>
-  <label for="product">Choose a product:</label><br>
-  <select id="product" name="product">
-    <option value="Laptop">Select</option>
-    <option value="Dell">Dell</option>
-    <option value="Lenovo">Lenovo</option>
-  </select>
-  <br>
+<h2>Dell</h2><br>
+  
   <label for="quantity">Quantity:</label><br>
   <input type="number" id="quantity" name="quantity" value="1">
   <br>
    <label for="selling_price">Selling Price:</label><br>
-  <input type="number" id="selling_price" name="selling_price" placeholder="Enter selling price in INR" ><br>
-  <label for="total_amount">Total Amount:</label><br>
-  <input type="number" id="total_amount" name="total_amount" placeholder="Amount in INR" ><br><br>
+  <input type="number" id="selling_price" name="selling_price" value="75000" readonly ><br><br>
   <input type="submit" value="Sell">
 </form>
+
+</div>
+
+<div class="all" id="right-column">
+
+	<form class="form">
+	<h2>Lenovo</h2><br>
+	
+	  
+	  <label for="quantity">Quantity:</label><br>
+	  <input type="number" id="quantity" name="quantity" value="1">
+	  <br>
+	   <label for="selling_price">Selling Price:</label><br>
+	  <input type="number" id="selling_price" name="selling_price" value="55000" readonly ><br><br>
+	  <input type="submit" value="Sell">
+	</form>
 
 </div>
 <%@include file="footer.jsp" %>
