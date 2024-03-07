@@ -86,7 +86,7 @@ background-color: #EBEBEB;
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select Product</label>
     <select class="form-control" id="exampleFormControlSelect1" name="product">
-    <option selected>Choose...</option>
+    <option selected>Choose..</option>
     
       <option>Lenovo</option>
       <option>Dell</option>

@@ -89,7 +89,7 @@ public class Purchase2 extends HttpServlet {
 			e.printStackTrace();
 		}
 //		RequestDispatcher rd = request.getRequestDispatcher("Purchase.jsp");
-//		
+	
 //		rd.forward(request, response);
 		RequestDispatcher rd = request.getRequestDispatcher("home1.jsp");
 		rd.forward(request, response);
