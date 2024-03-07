@@ -40,10 +40,10 @@
     <a class="nav-link" aria-current="page" href="show.jsp" style="color:black">Show</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="sell.jsp" style="color:black">Sell</a>
+    <a class="nav-link" href="Sell" style="color:black">Sell</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="purchase.jsp" style="color:black">Purchase</a>
+    <a class="nav-link" href="Purchase2" style="color:black">Purchase</a>
   </li>
 </ul>
 </div>
