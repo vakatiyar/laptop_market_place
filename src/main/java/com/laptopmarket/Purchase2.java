@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.laptopmarket.connect.Connections;
  
 /**
-*  Servlet class implements Purchase
+* Servlet class implements Purchase
 */
 @WebServlet("/Purchase2")
 public class Purchase2 extends HttpServlet {
@@ -89,10 +89,10 @@ public class Purchase2 extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	//RequestDispatcher rd= request.getRequestDispatcher("purchase.jsp");
+	RequestDispatcher rd= request.getRequestDispatcher("purchase.jsp");
 	
 //		rd.forward(request, response);
-		RequestDispatcher rd = request.getRequestDispatcher("home1.jsp");
+		//RequestDispatcher rd = request.getRequestDispatcher("home1.jsp");
 		rd.forward(request, response);
 		// TODO Auto-generated method stub
 	}

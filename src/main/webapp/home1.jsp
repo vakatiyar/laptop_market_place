@@ -16,7 +16,7 @@
         .background { 
             position: absolute; 
             height: 100%; 
-            width: 100%; 
+            width: 100%; s
             background-size: cover; 
             background-position: center; 
             filter: blur(10px); 
