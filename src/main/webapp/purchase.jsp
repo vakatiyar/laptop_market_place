@@ -79,28 +79,6 @@ background-color: #EBEBEB;
 
 
 </div>
-<!-- <h2>Purchase</h2>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Select Product</label>
-    <select class="form-control" id="exampleFormControlSelect1" name="product">
-    <option selected>Choose..</option>
-    
-      <option>Lenovo</option>
-      <option>Dell</option>
-    </select>
-    <label for="quantity">Quantity</label><br>
-  <input type="number" id="quantity" name="quantity" value="1" name="quantity">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPrice">Enter Price</label>
-    <input type="number" class="form-control" id="exampleInputPrice"  placeholder="" name="price">
-    </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Product Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="description"></textarea>
-  </div><br>
-  <button type="submit" class="btn btn-primary">Purchase</button> -->
 
 
 <%@include file="footer.jsp" %>
