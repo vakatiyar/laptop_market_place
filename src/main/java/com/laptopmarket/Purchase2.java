@@ -33,7 +33,7 @@ public class Purchase2 extends HttpServlet {
  
        
     /**
-     * @see HttpServlet# HttpServlet()
+     * @see HttpServlet#HttpServlet()
      */
     public Purchase2() {
         super();
