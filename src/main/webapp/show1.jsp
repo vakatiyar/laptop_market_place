@@ -1,21 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   <%@ page import="javax.servlet.http.HttpSession" %> 
-   <%! String pname,pdesc;
-   int pquant;
-   double pprice; %>
-<%
-HttpSession session1 = request.getSession(); 
-session1.setAttribute("pname","Lenovo" );
-session1.setAttribute("pdesc", "next");
-session1.setAttribute("pprice", "2345678");
-session1.setAttribute("pqant", "45");
-%>
+<%@page import = "java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Show Products</title>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style type="text/css">
 body {
@@ -23,7 +13,7 @@ body {
             color: #ffffff;
         }
 
-        .container {
+        .containr {
             background-color: #444d56;
             padding: 20px;
             border-radius: 10px;
@@ -45,19 +35,25 @@ body {
 </head>
 <body>
 
-<div class="container">
-    <div class="card">
-        <div class="cheader">
+<%if (request.getSession().getAttribute("result") != null){	
+		ResultSet res = (ResultSet)request.getSession().getAttribute("result");%>
+  		<%while (res.next()) { %>
+			<div class="containr">
+    		<div class="card">
+       		 <div class="cheader">
             <h5>Product Details</h5>
         </div>
         <div class="body">
-            <p class="ctext">Name of product: <%= pname %></p>
-            <p class="ctext">Description: <%= pdesc %></p>
-            <p class="ctext">Price: <%= pprice %></p>
-            <p class="ctext">Quantity Available: <%= pquant %></p>
+            <p class="ctext">Name of product: <%=res.getString(1) %></p>
+            <p class="ctext">Description: <%= res.getString(2) %></p>
+            <p class="ctext">Price: <%=res.getDouble(3) %></p>
+            <p class="ctext">Quantity Available: <%=res.getInt(4) %></p>
+            
         </div>
     </div>
 </div>
+  		<%}%>
+	<%}%>
 <%@include file="footer.jsp" %>
 </body>
 </html>

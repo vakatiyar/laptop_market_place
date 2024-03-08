@@ -19,49 +19,35 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/show")
 public class show extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	public static Connection con;  
+	private static final long serialVersionUID = 1L; 
     /**
      * @see HttpServlet#HttpServlet()
      */
     public show() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * 
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 		String n=request.getParameter("pname");
-		
-		con=Connections.CreateC(); 
-		
-		String q1="Select product_name,product_desc,product_price,total_purchased  from avaliable_to_purchase where product_name=?";
-		try {
+		Connection con=Connections.CreateC(); 
+		String q1="Select product_name,product_desc,product_price,total_purchased from available_to_purchase where product_name=?";
+	    		try {
 			PreparedStatement stm=con.prepareStatement(q1);
 			ResultSet res;
-		
 			stm.setString(1, n);
 			res = stm.executeQuery();
-			res.next();
 			request.getSession().setAttribute("result", res);
-			RequestDispatcher rd = request.getRequestDispatcher("Show1.jsp");
-			rd.forward(request, response);
-			res.close();
-			
-			
+			RequestDispatcher rd = request.getRequestDispatcher("show1.jsp");
+			rd.forward(request, response);	
 		} 
 		catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		
-		
-		
+		}		
 	}
 
 }
